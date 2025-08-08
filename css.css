@@ -27,14 +27,12 @@ header {
   flex-wrap: wrap;
 }
 
-/* Logo */
 .logo {
   height: 60px;
   max-width: 100%;
   margin-right: 15px;
 }
 
-/* Judul */
 header h1 {
   font-size: 20px;
   margin: 0;
@@ -42,7 +40,6 @@ header h1 {
   font-weight: bold;
 }
 
-/* Toggle Menu Button (mobile) */
 .menu-toggle {
   background: none;
   border: none;
@@ -52,7 +49,6 @@ header h1 {
   display: none;
 }
 
-/* MENU NAVIGASI */
 #nav-menu {
   display: flex;
   flex-direction: row;
@@ -118,7 +114,14 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* BERITA UMUM */
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* BERITA */
 .berita {
   padding: 40px 0;
 }
@@ -127,18 +130,6 @@ header h1 {
   text-align: center;
   color: #002147;
   margin-bottom: 30px;
-}
-
-/* CONTAINER */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* FITUR MELAYANG */
-.fitur.melayang {
-  margin-top: 20px;
 }
 
 /* GRID UMUM */
@@ -156,7 +147,8 @@ header h1 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.berita-item img, .fitur-grid img {
+.berita-item img,
+.fitur-grid img {
   width: 100%;
   height: auto;
   border-radius: 6px;
@@ -164,6 +156,7 @@ header h1 {
 
 .berita-item h3 {
   margin-top: 10px;
+  font-size: 1.1em;
 }
 
 .berita-item h3 a {
@@ -175,7 +168,24 @@ header h1 {
   text-decoration: underline;
 }
 
-/* PENELITIAN BOX */
+/* Tombol Baca Selengkapnya */
+.btn-selengkapnya {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-selengkapnya:hover {
+  background-color: #005fa3;
+}
+
+/* PENELITIAN */
 .penelitian-box ul {
   padding-left: 20px;
 }
@@ -183,7 +193,8 @@ header h1 {
 .penelitian-box ul li {
   margin-bottom: 8px;
 }
-     /*Pengabdian*/
+
+/* PENGABDIAN */
 .pengabdian-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -214,16 +225,7 @@ header h1 {
   line-height: 1.6;
 }
 
-
-/* FOOTER */
-footer {
-  background-color: #002147;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
+/* FORM KOMENTAR */
 #komentar {
   background-color: #f9fff9;
   padding: 20px;
@@ -244,6 +246,7 @@ footer {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 0.9em;
+  margin-bottom: 10px;
 }
 
 #form-komentar button {
@@ -259,3 +262,50 @@ footer {
 #form-komentar button:hover {
   background-color: #228B22;
 }
+
+/* KOMENTAR YANG TAMPIL */
+#daftar-komentar {
+  margin-top: 20px;
+}
+
+#daftar-komentar div {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-left: 4px solid #228B22;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #002147;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* RESPONSIF KHUSUS TABLET & MOBILE */
+@media screen and (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 16px;
+  }
+
+  .btn-selengkapnya {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  #form-komentar input,
+  #form-komentar textarea {
+    font-size: 0.85em;
+  }
+
+  #form-komentar button {
+    font-size: 0.85em;
+  }
+  }
