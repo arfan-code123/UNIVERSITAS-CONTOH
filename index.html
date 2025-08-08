@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Universitas Contoh</title>
-  <link rel="stylesheet" href="css.css"/>
+  <link rel="stylesheet" href="uni.css"/>
 </head>
 <body> 
 <main>
 
   <!-- HEADER -->  
-  <header>
-    <div class="header-container">
-      <img src="logo.png" alt="Logo" class="logo">
+  <header class="header">
+    <div class="container header-container">
+      <img src="logo.png" alt="Logo Universitas Contoh" class="logo">
       <h1>UNIVERSITAS CONTOH</h1>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
-    <nav id="nav-menu">
+    <nav id="nav-menu" class="nav">
       <a href="index.html">Beranda</a>
       <a href="pendidikan.html">Pendidikan</a>
       <a href="penelitian.html">Penelitian</a>
@@ -26,287 +26,203 @@
     </nav>
   </header>
   
-  <!-- HERO -->  
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-overlay">
       <div class="hero-text">
-       <h1> Mengabdi Pada Bangsa Melalui Pendidikan Dan Inovasi</h1>
+        <h1>Mengabdi Pada Bangsa Melalui Pendidikan Dan Inovasi</h1>
       </div>
     </div>
   </section> 
 
-  <!-- BERITA TERKINI --> 
+  <!-- BERITA TERKINI -->
   <section class="berita">
     <div class="container">
       <h2>Berita Terkini</h2>
-      <div class="fitur melayang">
-        <div class="fitur-grid">
-          <img src="foto.jpg" alt="Berita 1">
+      <div class="row">
+        <div class="col berita-item">
+          <img src="foto.jpg" alt="Langkah Tiga Sahabat" loading="lazy">
           <h3>Langkah Tiga Sahabat</h3>
-          <p>Di sebuah kampus ternama, Universitas Contoh, tiga sahabat bernama Rika, Nadya, dan Bima menjalani hari-hari mereka sebagai mahasiswa semester awal. Meski berasal dari jurusan berbeda — Raka di Teknik Informatika, Nadya di Ilmu Komunikasi, dan Bima di Arsitektur — mereka dipertemukan lewat organisasi kampus yang sama: Komunitas Inovator Muda.</p>
+          <p>Di Universitas Contoh, tiga sahabat dari jurusan berbeda bersatu dalam Komunitas Inovator Muda.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="berita">
-    <div class="container">
-      <div class="fitur melayang">
-        <div class="fitur-grid">
-          <img src="foto1.jpg" alt="Berita 2">
+        <div class="col berita-item">
+          <img src="foto1.jpg" alt="Tugas Kelompok" loading="lazy">
           <h3>Tugas Kelompok</h3>
-          <p>Hari itu matahari baru naik sepenggalah, tapi ruang kelas F205 sudah riuh. Dosen mata kuliah Perencanaan Strategis baru saja mengumumkan tugas kelompok: membuat proposal riset selama 3 minggu.</p>
-        </div>
-      </div>
-    </div>
-  </section> 
-  
-  <!-- BERITA PENDIDIKAN -->  
-  <section class="berita">
-    <div class="container">
-      <h2>Berita Pendidikan Sarjana Pascasarjana</h2>
-      <div class="fitur melayang">
-        <div class="fitur-grid">
-
-          <div class="berita-item">
-            <img src="teknik.jpg" alt="berita 1">
-            <h3><a href="berita1.html">Program Studi Teknik Sipil</a></h3>
-            <p>Program studi Teknik Sipil dirancang untuk mencetak lulusan yang mampu membangun infrastruktur berkualitas, seperti jembatan, gedung, dan jalan raya. Mahasiswa dibekali dengan ilmu konstruksi, struktur, hidrolika, dan manajemen proyek.</p>
-          </div>
-
-          <div class="berita-item">
-            <img src="hukum.jpg" alt="berita 2">
-            <h3><a href="berita2.html">Program Studi Hukum</a></h3>
-            <p>Fakultas Hukum Universitas Contoh menawarkan kurikulum komprehensif dengan fokus pada hukum pidana, perdata, tata negara, dan internasional.</p>
-          </div>
-
-          <div class="berita-item">
-            <img src="sospol.jpg" alt="berita 3">
-            <h3><a href="berita3.html">Program Studi Sosiologi</a></h3>
-            <p>Psikologi merupakan bidang ilmu yang mempelajari perilaku dan proses mental manusia. Mahasiswa akan memahami berbagai pendekatan psikologi, mulai dari klinis, perkembangan, sosial hingga pendidikan.</p>
-          </div>
-
-          <div class="berita-item">
-            <img src="magister.jpg" alt="berita 4">
-            <h3><a href="berita4.html">Program Magister Ilmu Komputer</a></h3>
-            <p>Program Magister Ilmu Komputer fokus pada pengembangan teknologi informasi, kecerdasan buatan, big data, dan keamanan siber.</p>
-          </div>
-
-          <div class="berita-item">
-            <img src="doctor.jpg" alt="berita 5">
-            <h3><a href="berita5.html">Program Doktor Ilmu Lingkungan</a></h3>
-            <p>Program ini bertujuan mencetak akademisi dan peneliti unggul di bidang ilmu lingkungan. Penelitian mencakup pengelolaan sumber daya alam, perubahan iklim, dan kebijakan lingkungan.</p>
-          </div>
-
+          <p>Dosen mengumumkan tugas proposal riset. Mahasiswa bersiap hadapi tantangan selama 3 minggu.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- BERITA PENDIDIKAN -->
+<section class="berita">
+  <div class="container">
+    <h2>Berita Pendidikan Sarjana Pascasarjana</h2>
+    <div class="row">
+
+      <!-- Teknik Sipil -->
+      <div class="col berita-item">
+        <img src="teknik.jpg" alt="Teknik Sipil" loading="lazy">
+        <h3>Program Studi Teknik Sipil</h3>
+        <p>
+          Program studi Teknik Sipil dirancang untuk mencetak lulusan yang mampu membangun infrastruktur berkualitas, seperti jembatan, gedung, dan jalan raya.
+        </p>
+        <a href="berita1.html" class="btn-selengkapnya">Baca Selengkapnya</a>
+      </div>
+
+      <!-- Hukum -->
+      <div class="col berita-item">
+        <img src="hukum.jpg" alt="Ilmu Hukum" loading="lazy">
+        <h3>Program Studi Hukum</h3>
+        <p>
+          Fakultas Hukum Universitas Contoh menawarkan kurikulum komprehensif dengan fokus pada hukum pidana, perdata, tata negara, dan internasional.
+        </p>
+        <a href="berita2.html" class="btn-selengkapnya">Baca Selengkapnya</a>
+      </div>
+
+      <!-- Sosiologi -->
+      <div class="col berita-item">
+        <img src="sospol.jpg" alt="Sosiologi" loading="lazy">
+        <h3>Program Studi Sosiologi</h3>
+        <p>
+          Sosiologi merupakan ilmu yang mempelajari masyarakat, struktur sosial, dan interaksi antar individu.
+        </p>
+        <a href="berita3.html" class="btn-selengkapnya">Baca Selengkapnya</a>
+      </div>
+
+      <!-- Magister Ilmu Komputer -->
+      <div class="col berita-item">
+        <img src="magister.jpg" alt="Magister Ilmu Komputer" loading="lazy">
+        <h3>Program Magister Ilmu Komputer</h3>
+        <p>
+          Program ini fokus pada pengembangan teknologi informasi, kecerdasan buatan, big data, dan keamanan siber.
+        </p>
+        <a href="berita4.html" class="btn-selengkapnya">Baca Selengkapnya</a>
+      </div>
+
+      <!-- Doktor Ilmu Lingkungan -->
+      <div class="col berita-item">
+        <img src="doctor.jpg" alt="Doktor Ilmu Lingkungan" loading="lazy">
+        <h3>Program Doktor Ilmu Lingkungan</h3>
+        <p>
+          Program ini mencetak akademisi dan peneliti unggul dalam bidang lingkungan, dengan fokus pada perubahan iklim dan kebijakan SDA.
+        </p>
+        <a href="berita5.html" class="btn-selengkapnya">Baca Selengkapnya</a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- PENELITIAN -->
-  
-  <section class="berita">
+ <section class="berita">
   <div class="container">
     <h2>Penelitian</h2>
-    <img src="penelitian.jpg" alt="penelitian" style="width: 100%; margin-bottom: 20px;">
-    <p>Universitas kami terus mendorong inovasi melalui penelitian unggulan dari dosen, mahasiswa, dan pusat studi yang beragam.</p>
+    <div class="fitur-grid">
+      
+      <!-- Gambar Penelitian -->
+      <div class="penelitian-box">
+        <img src="penelitian.jpg" alt="Penelitian Universitas" loading="lazy">
+        <p>Universitas kami mendorong inovasi melalui riset unggulan dari dosen, mahasiswa, dan pusat studi.</p>
+      </div>
 
-    <div class="fitur melayang">
-      <div class="fitur-grid">
+      <!-- Box 1 -->
+      <div class="penelitian-box">
+        <h3>Visi & Misi</h3>
+        <p>Mengembangkan ilmu pengetahuan untuk kemajuan bangsa.</p>
+      </div>
 
-        <div class="penelitian-box">
-          <h3>Visi & Misi Penelitian</h3>
-          <p>Mewujudkan kampus sebagai pusat penelitian yang unggul dalam pengembangan ilmu pengetahuan dan teknologi demi kemajuan bangsa.</p>
-        </div>
+      <!-- Box 2 -->
+      <div class="penelitian-box">
+        <h3>Kegiatan Riset</h3>
+        <ul>
+          <li>Dosen: Energi Terbarukan</li>
+          <li>Mahasiswa: Pertanian Modern</li>
+        </ul>
+      </div>
 
-        <div class="penelitian-box">
-          <h3>Daftar Kegiatan Penelitian</h3>
-          <ul>
-            <li>Penelitian Dosen: Inovasi Energi Terbarukan</li>
-            <li>Penelitian Mahasiswa: Teknologi Pertanian Modern</li>
-            <li>Penelitian Lintas Fakultas: Smart City untuk Daerah Terpencil</li>
-          </ul>
-        </div>
+      <!-- Tambahan jika ada -->
+      <div class="penelitian-box">
+        <h3>Publikasi Ilmiah</h3>
+        <ul>
+          <li><a href="#">Jurnal Sains Vol. 1</a></li>
+          <li><a href="#">Prosiding Nasional</a></li>
+        </ul>
+      </div>
 
-        <div class="penelitian-box">
-          <h3>Publikasi Ilmiah</h3>
-          <ul>
-            <li><a href="journal.html">Jurnal Teknologi dan Sains – Vol 5</a></li>
-            <li><a href="#">Prosiding Seminar Nasional 2025</a></li>
-            <li><a href="#">Buku: Inovasi Sosial untuk Masyarakat Pesisir</a></li>
-          </ul>
-        </div>
-
-        <div class="penelitian-box">
-          <h3>Pusat Studi & Lembaga Riset</h3>
-          <ul>
-            <li>Pusat Studi Maritim</li>
-            <li>Laboratorium Energi Baru dan Terbarukan</li>
-            <li>LPPM Universitas Contoh</li>
-          </ul>
-        </div>
-
-        <div class="penelitian-box">
-          <h3>Hibah dan Program Pendanaan</h3>
-          <ul>
-            <li>Hibah Riset Kemendikbud</li>
-            <li>Matching Fund BRIN</li>
-            <li>Skema Riset Mandiri Dosen</li>
-          </ul>
-        </div>
-
-        <div class="penelitian-box">
-          <h3>Berita & Agenda Penelitian</h3>
-          <ul>
-            <li><a href="#">Seminar Nasional Penelitian Terapan – 14 Agustus 2025</a></li>
-            <li><a href="#">Workshop Penulisan Jurnal Internasional – 20 September 2025</a></li>
-          </ul>
-        </div>
-
-        <div class="penelitian-box">
-          <h3>Kolaborasi Riset</h3>
-          <p>Kami menjalin kerja sama dengan berbagai pihak, seperti universitas luar negeri, industri lokal, dan pemerintah daerah untuk memperluas dampak penelitian kami.</p>
-        </div>
-
-      </div> <!-- .fitur-grid -->
-    </div> <!-- .fitur.melayang -->
-  </div> <!-- .container -->
+    </div> <!-- .fitur-grid -->
+  </div>
 </section>
 
   <!-- PENGABDIAN -->
   
-  <section class="berita">
-    <div class="container">
-      <h2>Pengabdian</h2>
-      <div class="fitur melayang">
-        <div class="fitur-grid">
-          <!-- Isi pengabdian bisa ditambahkan di sini -->
-        </div>
-      </div>
-    </div>
-  </section>
-   <section class="fitur pengabdian-section">
+ <section class="berita">
   <div class="container">
-    <h2 class="section-title">Pengabdian kepada Masyarakat</h2>
-    <p class="section-intro">
-      Pengabdian kepada masyarakat merupakan bagian dari Tri Dharma Perguruan Tinggi yang menjadi komitmen utama Universitas Contoh dalam memberikan kontribusi nyata bagi kemajuan bangsa. Kegiatan ini dilakukan secara berkelanjutan melalui kolaborasi antara dosen, mahasiswa, dan mitra eksternal.
+    <h2>Pengabdian kepada Masyarakat</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+      Komitmen dalam memberikan kontribusi nyata melalui kolaborasi dosen, mahasiswa, dan mitra eksternal.
     </p>
 
-    <div class="pengabdian-grid">
+    <!-- Gunakan fitur-grid agar responsif dan seragam -->
+    <div class="fitur-grid">
+
+      <!-- Card 1 -->
       <div class="pengabdian-card">
-        <img src="umkm.jpg" alt="Pelatihan UMKM" class="pengabdian-img">
-        <h3>Pemberdayaan UMKM Lokal</h3>
-        <p>
-          Program pelatihan dan pendampingan bagi pelaku UMKM di desa sekitar, bertujuan untuk meningkatkan manajemen usaha dan pemasaran digital.
-        </p>
+        <img src="umkm.jpg" alt="UMKM" loading="lazy">
+        <h3>UMKM Lokal</h3>
+        <p>Pelatihan dan pendampingan digital marketing bagi UMKM desa.</p>
       </div>
 
+      <!-- Card 2 -->
       <div class="pengabdian-card">
-        <img src="kes.jpg" alt="Penyuluhan Kesehatan" class="pengabdian-img">
-        <h3>Penyuluhan Kesehatan Masyarakat</h3>
-        <p>
-          Kegiatan edukasi gizi, sanitasi, dan pencegahan penyakit bagi masyarakat terpencil, bekerjasama dengan dinas kesehatan daerah.
-        </p>
+        <img src="kes.jpg" alt="Kesehatan" loading="lazy">
+        <h3>Penyuluhan Kesehatan</h3>
+        <p>Edukasi gizi dan sanitasi bekerja sama dengan dinas kesehatan.</p>
       </div>
 
+      <!-- Card 3 -->
       <div class="pengabdian-card">
-        <img src="wis.jpg" alt="Pengembangan Desa Wisata" class="pengabdian-img">
-        <h3>Pengembangan Desa Wisata</h3>
-        <p>
-          Mahasiswa dan dosen lintas disiplin turut serta merancang konsep desa wisata berbasis budaya dan kearifan lokal.
-        </p>
+        <img src="wis.jpg" alt="Desa Wisata" loading="lazy">
+        <h3>Desa Wisata</h3>
+        <p>Pengembangan desa berbasis budaya dan kearifan lokal.</p>
       </div>
-    </div>
 
-    <div class="pengabdian-footer">
-      <a href="laporan-pengabdian.pdf" class="btn" target="_blank">Unduh Laporan Kegiatan</a>
+    </div> <!-- .fitur-grid -->
+
+    <!-- Tombol Unduh -->
+    <div class="pengabdian-footer" style="text-align: center; margin-top: 30px;">
+      <a href="laporan-pengabdian.pdf" class="btn" target="_blank">Unduh Laporan</a>
     </div>
   </div>
 </section>
+
+  <!-- FORM KOMENTAR -->
+  <section class="komentar container">
+    <h2>Komentar</h2>
+    <form id="form-komentar">
+      <label for="nama">Nama:</label><br>
+      <input type="text" id="nama" required><br><br>
+      <label for="pesan">Komentar:</label><br>
+      <textarea id="pesan" rows="4" required></textarea><br><br>
+      <button type="submit">Kirim Komentar</button>
+    </form>
+    <div id="daftar-komentar"></div>
+  </section>
+
 </main>
 
-    <!-- Form Komentar -->
-  <form id="form-komentar">
-  <label for="nama">Nama:</label><br>
-  <input type="text" id="nama" required><br><br>
-  <label for="pesan">Komentar:</label><br>
-  <textarea id="pesan" rows="4" required></textarea><br><br>
- <button type="submit">Kirim Komentar</button>
-  </form>
-  <hr>
-   <!-- Komentar ditampilkan di sini -->
-  <div id="daftar-komentar"></div>
-  
-  <!-- Firebase SDK -->
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>&copy; La Arfan 2025 - Universitas Contoh</p>
+  </div>
+</footer>
 
-  <!-- FOOTER --> 
-  <footer>
-    <div class="container">
-      <p>&copy; Dibuat La Arfan 2025 Universitas Contoh</p>
-    </div>
-  </footer>  
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-  import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
-  const firebaseConfig = {
-    apiKey: "AIzaSyDwVlHJN83AshbVkqBK1aQqBurqtk98qoI",
-    authDomain: "komentar-berita-6d9af.firebaseapp.com",
-    databaseURL: "https://komentar-berita-6d9af-default-rtdb.firebaseio.com",
-    projectId: "komentar-berita-6d9af",
-    storageBucket: "komentar-berita-6d9af.appspot.com",
-    messagingSenderId: "1004795777058",
-    appId: "1:1004795777058:web:9b69eece1b7578b4017a7b"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-
-  const kodeAdmin = "12345"; // 🛑 Ganti ini dengan kode rahasia admin kamu
-
-  const form = document.getElementById('form-komentar');
-  const daftarKomentar = document.getElementById('daftar-komentar');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nama = document.getElementById('nama').value;
-    const pesan = document.getElementById('pesan').value;
-
-    push(ref(db, 'komentar'), { nama, pesan });
-    form.reset();
-  });
-
-  // Tampilkan komentar
-  onValue(ref(db, 'komentar'), (snapshot) => {
-    daftarKomentar.innerHTML = '';
-    snapshot.forEach((childSnapshot) => {
-      const id = childSnapshot.key;
-      const data = childSnapshot.val();
-      const komentarDiv = document.createElement('div');
-      komentarDiv.innerHTML = `
-        <p><strong>${data.nama}</strong>: ${data.pesan}</p>
-        <button onclick="hapusKomentar('${id}')">Hapus</button>
-        <hr>
-      `;
-      daftarKomentar.appendChild(komentarDiv);
-    });
-  });
-
-  // Fungsi hapus hanya jika masukkan kode admin benar
-  window.hapusKomentar = function(id) {
-    const input = prompt("Masukkan kode admin untuk hapus komentar:");
-    if (input === kodeAdmin) {
-      remove(ref(db, 'komentar/' + id));
-    } else {
-      alert("Kode salah. Anda bukan admin.");
-    }
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    nav.classList.toggle("active");
   }
 </script>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("nav-menu");
-      nav.classList.toggle("active");
-    }
-  </script>
 </body>
 </html>
