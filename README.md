@@ -10,7 +10,7 @@ Website ini merupakan proyek pengembangan front-end untuk halaman informasi kamp
 
 ## ✍️ Dibuat oleh
 **La Arfan**  
-Pemula Web Developer dari Weda, Maluku Utara  
+Pemula Web Developer dari Binongko, Wakatobi  
 Tahun: 2025
 
 ## ⚠️ Hak Cipta & Lisensi
