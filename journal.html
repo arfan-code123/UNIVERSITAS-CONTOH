@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universitas Contoh</title>
+  <link rel="stylesheet" href="css.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Logo Universitas Contoh" class="logo">
+      <h1>UNIVERSITAS CONTOH</h1>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
+    </div>
+    <nav id="nav-menu" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="penelitian.html">Penelitian</a>
+      <a href="pengabdian.html">Pengabdian</a>
+      <a href="fakultas.html">Fakultas</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- ===== KONTEN UTAMA ===== -->
+  <main class="container">
+    <section class="article">
+      <h2>1. Inovasi Kecerdasan Buatan dalam Dunia Pendidikan</h2>
+      <p class="authors">Dr. Andi Prasetyo, M.T., Rina Maharani, S.Kom</p>
+      <p>
+        Artikel ini membahas bagaimana penerapan kecerdasan buatan (AI) telah mengubah cara belajar
+        dan mengajar di institusi pendidikan. Penggunaan chatbot, sistem rekomendasi, dan evaluasi otomatis
+        dibahas secara mendalam.
+      </p>
+    </section>
+
+    <section class="article">
+      <h2>2. Pengembangan Material Nano untuk Energi Terbarukan</h2>
+      <p class="authors">Dewi Kartika, Ph.D., Budi Santoso, M.Sc</p>
+      <p>
+        Fokus penelitian ini adalah pengembangan material nano untuk meningkatkan efisiensi panel surya
+        dan penyimpanan energi. Studi eksperimental menunjukkan peningkatan efisiensi hingga 20%.
+      </p>
+    </section>
+
+    <section class="article">
+      <h2>3. Sistem Monitoring Kualitas Udara Berbasis IoT</h2>
+      <p class="authors">Ilham Nurrohman, S.T., M.T.</p>
+      <p>
+        Penelitian ini mengembangkan prototipe sistem monitoring kualitas udara menggunakan sensor IoT yang terintegrasi
+        dengan aplikasi seluler untuk pelaporan secara real-time.
+      </p>
+    </section>
+
+    <section class="article">
+      <h2>4. Pengaruh Algoritma Machine Learning terhadap Prediksi Cuaca Mikro</h2>
+      <p class="authors">Siti Zahra, M.Sc</p>
+      <p>
+        Penelitian ini mengkaji efektivitas berbagai algoritma machine learning dalam memprediksi cuaca mikro
+        di wilayah perkotaan menggunakan dataset dari BMKG dan sensor lokal.
+      </p>
+    </section>
+
+    <section class="article">
+      <h2>5. Revolusi Teknologi Blockchain dalam Dunia Kesehatan</h2>
+      <p class="authors">Rizky Aditya, S.Kom</p>
+      <p>
+        Studi ini mengeksplorasi penggunaan teknologi blockchain untuk mengamankan data medis, meningkatkan
+        transparansi, dan mengurangi biaya administrasi di rumah sakit.
+      </p>
+    </section>
+  </main>
+  
+      <!-- Form Komentar -->
+  <form id="form-komentar">
+  <label for="nama">Nama:</label><br>
+  <input type="text" id="nama" required><br><br>
+  <label for="pesan">Komentar:</label><br>
+  <textarea id="pesan" rows="4" required></textarea><br><br>
+ <button type="submit">Kirim Komentar</button>
+  </form>
+  <hr>
+   <!-- Komentar ditampilkan di sini -->
+  <div id="daftar-komentar"></div>
+  
+  <!-- Firebase SDK -->
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p>&copy;Dibuat La Arfan 2025 Universitas Contoh</p>
+    </div>
+  </footer>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyDwVlHJN83AshbVkqBK1aQqBurqtk98qoI",
+    authDomain: "komentar-berita-6d9af.firebaseapp.com",
+    databaseURL: "https://komentar-berita-6d9af-default-rtdb.firebaseio.com",
+    projectId: "komentar-berita-6d9af",
+    storageBucket: "komentar-berita-6d9af.appspot.com",
+    messagingSenderId: "1004795777058",
+    appId: "1:1004795777058:web:9b69eece1b7578b4017a7b"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  const kodeAdmin = "12345"; // 🛑 Ganti ini dengan kode rahasia admin kamu
+
+  const form = document.getElementById('form-komentar');
+  const daftarKomentar = document.getElementById('daftar-komentar');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nama = document.getElementById('nama').value;
+    const pesan = document.getElementById('pesan').value;
+
+    push(ref(db, 'komentar'), { nama, pesan });
+    form.reset();
+  });
+
+  // Tampilkan komentar
+  onValue(ref(db, 'komentar'), (snapshot) => {
+    daftarKomentar.innerHTML = '';
+    snapshot.forEach((childSnapshot) => {
+      const id = childSnapshot.key;
+      const data = childSnapshot.val();
+      const komentarDiv = document.createElement('div');
+      komentarDiv.innerHTML = `
+        <p><strong>${data.nama}</strong>: ${data.pesan}</p>
+        <button onclick="hapusKomentar('${id}')">Hapus</button>
+        <hr>
+      `;
+      daftarKomentar.appendChild(komentarDiv);
+    });
+  });
+
+  // Fungsi hapus hanya jika masukkan kode admin benar
+  window.hapusKomentar = function(id) {
+    const input = prompt("Masukkan kode admin untuk hapus komentar:");
+    if (input === kodeAdmin) {
+      remove(ref(db, 'komentar/' + id));
+    } else {
+      alert("Kode salah. Anda bukan admin.");
+    }
+  }
+</script>
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-menu");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
