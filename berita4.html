@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css.css"/>
   </head>
   <body> 
+  <main>
      <!-- HEADER -->  
   <header>
   <div class="header-container">
@@ -23,33 +24,43 @@
   </nav>
 </header>
 
-  <main class="container">
-    <h2>Program Magister Ilmu Komputer</h2>
+  <section class="berita">
+   <div class="col berita-item">
+    <h2>Program Magister Ilmu Komputer </h2>
+    <img src="magister.jpg" alt="Program Studi Magister" loading="lazy">
+    
     <p>
       Program Magister Ilmu Komputer fokus pada pengembangan teknologi informasi, kecerdasan buatan, big data, dan keamanan siber. 
     </p>
     <p>
       Mahasiswa diarahkan untuk riset dan inovasi teknologi yang aplikatif serta berdampak bagi masyarakat.
     </p>
-  </main>
-    <!-- Form Komentar -->
-  <form id="form-komentar">
-  <label for="nama">Nama:</label><br>
-  <input type="text" id="nama" required><br><br>
-  <label for="pesan">Komentar:</label><br>
-  <textarea id="pesan" rows="4" required></textarea><br><br>
- <button type="submit">Kirim Komentar</button>
-  </form>
-  <hr>
-   <!-- Komentar ditampilkan di sini -->
-  <div id="daftar-komentar"></div>
+    
+</div>
+</section>
+
+  <!-- FORM KOMENTAR -->
+ <section class="komentar container">
+ <h2>Form Komentar</h2>
+ <form id="form-komentar">
+ <label for="nama">Nama:</label><br>
+ <input type="text" id="nama" required><br><br>
+ <label for="pesan">Komentar:</label><br>
+ <textarea id="pesan" rows="4" required></textarea><br><br>
+  <button type="submit">Kirim Komentar</button>
+    </form>
+    <div id="daftar-komentar"></div>
+  </section>
+
+</main>
   
-  <!-- Firebase SDK -->
 
   <footer>
     <p>&copy; Dibuat La Arfan 2025 Universitas Contoh</p>
   </footer>
   
+    <!-- Firebase SDK -->
+    
     <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
   import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
