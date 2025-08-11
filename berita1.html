@@ -5,18 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Universitas Contoh</title>
   <link rel="stylesheet" href="css.css"/>
-  <style>
-    /* Tambahan style langsung jika belum ada di CSS */
-    .container img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-      border-radius: 8px;
-    }
-  </style>
 </head>
 <body> 
+<main>
 
   <!-- HEADER -->  
   <header>
@@ -36,9 +27,10 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="container">
+    <section class="berita">
+   <div class="col berita-item">
     <h2>Program Studi Teknik Sipil</h2>
-    <img src="teknik.jpg" alt="Program Studi Teknik Sipil">
+    <img src="teknik.jpg" alt="Program Studi Teknik Sipil" loading="lazy">
 
     <p>
       Program studi Teknik Sipil dirancang untuk mencetak lulusan yang mampu membangun infrastruktur berkualitas, seperti jembatan, gedung, dan jalan raya. Mahasiswa dibekali dengan ilmu konstruksi, struktur, hidrolika, dan manajemen proyek.
@@ -46,19 +38,24 @@
     <p>
       Dengan dukungan laboratorium modern dan dosen berpengalaman, Teknik Sipil menjadi salah satu pilihan favorit di Universitas Contoh.
     </p>
-  </main>
-    <!-- Form Komentar -->
-  <form id="form-komentar">
-  <label for="nama">Nama:</label><br>
-  <input type="text" id="nama" required><br><br>
-  <label for="pesan">Komentar:</label><br>
-  <textarea id="pesan" rows="4" required></textarea><br><br>
- <button type="submit">Kirim Komentar</button>
-  </form>
-  <hr>
-   <!-- Komentar ditampilkan di sini -->
-  <div id="daftar-komentar"></div>
-  
+    
+    </div>
+</section>
+    
+  <!-- FORM KOMENTAR -->
+ <section class="komentar container">
+ <h2>Komentar</h2>
+ <form id="form-komentar">
+ <label for="nama">Nama:</label><br>
+ <input type="text" id="nama" required><br><br>
+ <label for="pesan">Komentar:</label><br>
+ <textarea id="pesan" rows="4" required></textarea><br><br>
+  <button type="submit">Kirim Komentar</button>
+    </form>
+    <div id="daftar-komentar"></div>
+  </section>
+
+</main>
   <!-- Firebase SDK -->
 
 
@@ -66,7 +63,8 @@
   <footer>
     <p>&copy; Dibuat La Arfan 2025 Universitas Contoh</p>
   </footer>
-    <script type="module">
+  
+  <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
   import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
   const firebaseConfig = {
