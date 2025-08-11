@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universitas Contoh</title>
+  <link rel="stylesheet" href="css.css"/>
+  <style>
+  
+      /* Tambahan style langsung jika belum ada di CSS */
+    .container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body> 
+  <!-- HEADER -->  
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>UNIVERSITAS CONTOH</h1>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Beranda</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="penelitian.html">Penelitian</a>
+      <a href="pengabdian.html">Pengabdian</a>
+      <a href="fakultas.html">Fakultas</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+   <section class="contact">
+  <h2>Kontak Saya</h2>
+  <p>Jika Butuh Jasa Pembuatan Website Untuk Desa,Universitas, Sekolah, Tokoh Online, dll Hubungi Saya Melalui Link Di bawah Ini</p>
+  
+  <ul>
+    <li>
+      📧 Email: 
+      <a href="https://mail.google.com/mail/?view=cm&to=oihuarfan@gmail.com" target="_blank">
+        oihuarfan@gmail.com
+      </a>
+    </li>
+    <li>
+      💬 WhatsApp: 
+      <a href="https://wa.me/6282320520288?text=Halo%20Arfan%2C%20saya%20melihat%20CV%20Anda%20di%20website" target="_blank">
+        +62 823-2052-0288
+      </a>
+    </li>
+    <li>
+      💻 GitHub: 
+      <a href="https://github.com/arfan-code123" target="_blank">
+        github.com/arfan-code123
+      </a>
+    </li>
+    <li>
+      📍 Alamat: Wakatobi, Sulawesi Tenggara
+    </li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>&copy; Dibuat La Arfan 2025 - Universitas Contoh</p>
+  </div>
+</footer>
+  
+    <!-- SCRIPT MENU TOGGLE -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-menu");
+      nav.classList.toggle("active");
+    }
+  </script>
+  </body>
+  </html>
