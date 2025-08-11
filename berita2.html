@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css.css"/>
   </head>
   <body> 
+  <main>
      <!-- HEADER -->  
   <header>
   <div class="header-container">
@@ -23,23 +24,23 @@
   </nav>
 </header>
 
-  <section class="berita">
-  <div class="col berita-item">
-  <h2>Program Doktor Ilmu Lingkungan</h2>
-  <img src="doctor.jpg" alt="Program Domtor Ilmu Lingkungan" loading="lazy">
+   <section class="berita">
+   <div class="col berita-item">
+    <h2>Program Studi Hukum</h2>
+    <img src="hukum.jpg" alt="Program Studi Hukum" loading="lazy">
     <p>
-      Program ini bertujuan mencetak akademisi dan peneliti unggul di bidang ilmu lingkungan. Penelitian mencakup pengelolaan sumber daya alam, perubahan iklim, dan kebijakan lingkungan.
+      Fakultas Hukum Universitas Contoh menawarkan kurikulum komprehensif dengan fokus pada hukum pidana, perdata, tata negara, dan internasional. 
     </p>
     <p>
-      Lulusan diharapkan menjadi pemimpin dalam pembangunan berkelanjutan.
+      Lulusan diharapkan mampu menjadi hakim, pengacara, notaris, atau akademisi yang menjunjung tinggi keadilan dan etika hukum.
     </p>
-  </div>
-  </section>
+    </div>
+    </section>
   
       <!-- Form Komentar -->
-  <!-- FORM KOMENTAR -->
+      
  <section class="komentar container">
- <h2>Form Komentar</h2>
+ <h2>Komentar</h2>
  <form id="form-komentar">
  <label for="nama">Nama:</label><br>
  <input type="text" id="nama" required><br><br>
@@ -50,14 +51,14 @@
     <div id="daftar-komentar"></div>
   </section>
 </main>
-  
+
+  <!-- Firebase SDK -->
+
+
   <footer>
     <p>&copy; Dibuat La Arfan 2025 Universitas Contoh</p>
   </footer>
-  
-    <!-- Firebase SDK -->
-    
- <script type="module">
+    <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
   import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
   const firebaseConfig = {
@@ -114,7 +115,7 @@
   }
 </script>
 
- <script>
+    <script>
     function toggleMenu() {
       const nav = document.getElementById("nav-menu");
       nav.classList.toggle("show");
